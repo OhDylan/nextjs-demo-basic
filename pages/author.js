@@ -10,8 +10,8 @@ const Author = (props) => {
                 props.authors.map(author => (
                 <ul>
                     <Link href={`author/${author.id}`}>
-                        <li key= {author.id} >
-                            <img src={author.avatar} />
+                        <li>
+                            <img  alt= {author.id} src={author.avatar} />
                             <h3>{author.first_name} {author.last_name}</h3>
                             <p>{author.email}</p>
                         </li>
