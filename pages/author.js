@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 
-const Author = (props) => {
+const Authors = ({authors}) => {
     return (
         <div>
             <h1>Authors</h1>
             <div>
             {
-                props.authors.map(author => (
+                authors.map(author => (
                 <ul>
                     <Link href={`author/${author.id}`}>
-                        <li>
-                            <img  alt= {author.id} src={author.avatar} />
+                        <li key={author.id}>
+                            <img  alt= 
+                            {author.id} src={author.avatar} />
                             <h3>{author.first_name} {author.last_name}</h3>
                             <p>{author.email}</p>
                         </li>
@@ -24,7 +25,7 @@ const Author = (props) => {
     )
 }
 
-Author.getInitialProps = async function(){
+Authors.getInitialProps = async () => {
     const response = await fetch('https://reqres.in/api/users?page=1');
     const data = await response.json();
     return {
@@ -32,4 +33,4 @@ Author.getInitialProps = async function(){
     }
 }
 
-export default Author;
+export default Authors;
