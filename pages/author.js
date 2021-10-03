@@ -6,20 +6,21 @@ const Authors = ({authors}) => {
         <div>
             <h1>Authors</h1>
             <div>
+            <ul>
             {
                 authors.map(author => (
-                <ul>
-                    <Link href={`author/${author.id}`}>
-                        <li key={author.id}>
+                
+                    <Link href={`author/${author.id}`} key={author.id}>
+                        <li>
                             <img  alt= 
                             {author.id} src={author.avatar} />
                             <h3>{author.first_name} {author.last_name}</h3>
                             <p>{author.email}</p>
                         </li>
                     </Link>
-                </ul>
                 ))
             }
+            </ul>
             </div>
         </div>
     )

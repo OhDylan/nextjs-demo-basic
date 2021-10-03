@@ -25,8 +25,7 @@ const Author = () => {
         return () => { componentMounted = false }
     }, [authorId])
     return ( 
-            <div>
-                
+            <div className='container'>
                 {!loading && (
                     <>
                         <h1>{author.first_name}-{author.last_name}</h1>
@@ -41,7 +40,6 @@ const Author = () => {
 }
 
 let fetchData = async (authorId) => {
-    console.log(`https://reqres.in/api/users/${authorId}`)
     const response = await fetch(`https://reqres.in/api/users/${authorId}`);
     const data = await response.json();
     return data.data;
