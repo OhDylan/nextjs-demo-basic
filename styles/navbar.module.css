@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    margin: 0;
+    background: rgba(0,0,0,0.8);
+    color: white
+}
+
+.container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.container ul  li {
+    float: left;
+}
+
+.container ul li:hover{
+    color:black
+}
