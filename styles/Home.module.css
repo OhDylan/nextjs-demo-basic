@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+
 }
 
 .main {
@@ -14,6 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 95%;
+  text-align: justify;
 }
 
 .footer {
@@ -117,7 +121,7 @@
 
 @media (max-width: 600px) {
   .grid {
-    width: 100%;
+    width: 95%;
     flex-direction: column;
   }
 }
